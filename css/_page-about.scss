@@ -1,0 +1,117 @@
+article {
+    background-color: #fff;
+}
+.about-page {
+    img {
+        width: 100%;
+    }
+    .copy-block {
+        max-width: 768px;
+        margin: 0 auto;
+        padding: 15px;
+        h1 {
+            letter-spacing: 0;
+            text-align: center;
+        }
+        .service-header-table {
+            z-index: 2;
+        }
+    }
+    .our-story {
+        padding: 40px 0;
+    }
+    .our-niche {
+        overflow: hidden;
+        padding-bottom: 40px;
+        p {
+            @media screen and (max-width: 768px) {
+                padding: 0 15px;
+            }
+        }
+    }
+    ul {
+        position: relative;
+        padding: 0;
+        width: 90%;
+        margin: 20px auto;
+        li {
+            padding: 15px 0 15px 80px;
+            position: relative;
+            width: 80%;
+            font-size: 22px;
+            line-height: 32px;
+            @media screen and (max-width: 768px) {
+                padding: 15px;
+                padding-left: 55px;
+                width: 100%;
+            }
+        }
+        li.honor {
+            background: url('../images/_icons/shapes.svg') no-repeat left 50%;
+            background-size: 38px;
+        }
+        li.focus {
+            background: url('../images/_icons/weapons.svg') no-repeat left 50%;
+            background-size: 38px;
+        }
+        li.empower {
+            background: url('../images/_icons/silhouette.svg') no-repeat left 50%;
+            background-size: 38px;
+        }
+    }
+    .title {
+        text-transform: uppercase;
+    }
+}
+.instagram-block {
+    img {
+        width: 100%;
+        vertical-align: top;
+    }
+    [class^="col-"] {
+        padding: 0;
+    }
+    .row {
+        margin: 0;
+    }
+    p {
+        font-size: 16px;
+        padding: 0 15px;
+    }
+}
+.map {
+    p {
+        font-size: 14px;
+    }
+    ul {
+        list-style-type: none;
+        margin-top: 0;
+        li {
+            margin-bottom: 10px;
+        }
+    }
+    .address-gmap {
+        color: inherit;
+        line-height: 24px;
+    }
+    .hours {
+        text-align: right;
+    }
+}
+.map-wrapper {
+    height: 400px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin: 0 auto;
+    #map_canvas {
+        display: block;
+        h2 {
+            font-size: 16px;
+        }
+        p {
+            font-size: 13px;
+            line-height: 18px;
+        }
+    }
+}

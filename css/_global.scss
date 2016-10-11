@@ -1,0 +1,175 @@
+
+/**
+ *	Site Wide Colors and Elements.
+ **/
+
+/** old branding colors **/
+//$i-blue: #21648f;
+//$d-orange: #d67d00;
+//$p-green: #288d72;
+//$v-purple: #561085;
+//
+//$red: #bb051b;
+//$white: #fff;
+//
+//$btn-green : #8faf5f;
+//$btn-orange: #f38630;
+//$btn-blue: #20648e;
+//$btn-purple: #551289;
+//$btn-green: #298d73;
+//
+//$bg-blue: #4e6385;
+//$bg-red: #c80e25;
+//$bg-navyblue: #191E23;
+
+/**
+    replacement colors for 2016
+**/
+$i-blue: #521cd4;
+$d-orange: #521cd4;
+$p-green: #e91853;
+$v-purple: #521cd4;
+
+$red: #e91853;
+$white: #fff;
+
+$btn-green : #e91853;
+$btn-orange: #521cd4;
+$btn-blue: #521cd4;
+$btn-purple: #521cd4;
+$btn-green: #521cd4;
+$btn-violet: #521cd4;
+
+$bg-blue: #521cd4;
+$bg-red: #e91853;
+$bg-navyblue: #521cd4;
+
+/**
+    new branding colors for 2016
+**/
+$white: #fff;
+$lightgray: #f0f0ec;
+$mediumgray: #b4b0a2;
+$darkgray: #1a1a10;
+$violet: #521cd4;
+$magenta: #e91853;
+
+.i-blue { color: $i-blue; }
+.d-orange { color: $d-orange; }
+.p-green { color: $p-green; }
+.v-purple { color: $v-purple; }
+
+.btn-green {
+	background-color: #e91853;
+	color: #fff;
+}
+.btn-orange {
+	background-color: $btn-orange;
+	color: #fff;
+}
+.btn-blue {
+	background-color: $btn-blue;
+	color: #fff;
+}
+.btn-purple {
+	background-color: $btn-purple;
+	color: #fff;
+}
+.btn-green {
+	background-color: #e91853;
+	color: #fff;
+}
+.btn-violet {
+	background-color: $btn-violet;
+	color: #fff;
+}
+
+.red { color: $red; }
+.white { color: $white; }
+
+.blue-bg {
+	background-color: $lightgray;
+}
+
+.bg-texture-1 {
+//	background: $lightgray url('../images/textures/binding-dark.png');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+ul, ol {
+	list-style-type: none;
+	padding: 0;
+}
+
+
+a { text-decoration: none; }
+
+.center-text { text-align: center; }
+
+.white-text {
+	color: #fff;
+}
+
+// Footer Twitter Carousel
+.testimonial-carousel {
+	background-color: #b4b0a2;
+	min-height: 328px;
+
+	.slide {
+		color: #fff;
+		line-height: 30px;
+		outline: none;
+		.container {
+			max-width: 600px;
+		}
+
+		a {
+			text-decoration: none;
+			color: inherit;
+			border-bottom: 1px dotted #000;
+		}
+
+	}
+	.slide-text {
+		margin-top: 70px;
+		text-align: center;
+		font: 300 normal 14pt/1.4em "Source Sans Pro", san-serif;
+        padding: 25px 0;
+        color: #fff;
+        border-top: 1px solid #dfdfdf;
+        border-bottom: 1px solid #dfdfdf;  
+//        background: url(../images/_icons/quote.svg) no-repeat center left;
+    }
+
+	.container {
+		margin-bottom: 30px;
+	}
+
+	.slide-footer {
+		margin-top: 20px;
+
+		a, .slide-date {
+			border-bottom: none;
+			font: 900 normal 16pt/1.4em "Source Sans Pro", san-serif;
+			height: 30px;
+	    display: inline-block;
+	    vertical-align: middle;
+		}
+	}
+
+	.icon-twitter {
+		color: #55ACEE;
+	}
+
+}

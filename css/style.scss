@@ -1,0 +1,595 @@
+@import "normalize";
+@import "grids";
+@import "vendor";
+@import "fonts";
+@import "animation";
+@import "global";
+@import 'template-usecase';
+@import 'template-index';
+@import 'template-service';
+@import 'page-about';
+@import 'page-services';
+@import 'template-request-quote';
+
+/****************************
+NEW BRAND FONT SPECIFICATIONS
+*****************************/
+
+h1 {
+    font: 900 normal 32pt/1.2em "Source Sans Pro", san-serif;
+    color: #e91853;
+}
+h2 {
+    font: 300 normal 24pt/1.2em "Source Sans Pro", san-serif;
+    color: #b4b0a2;
+}
+h3 {
+    font: 300 normal 20pt/1.2em "Source Sans Pro", san-serif;
+    color: #b4b0a2;
+}
+h4 {
+    font: 900 normal 20pt/1.2em "Source Sans Pro", san-serif;
+    color: #fff;
+}
+html,
+body,
+p {
+    font: 300 normal 14pt/1.4em "Source Sans Pro", san-serif;
+    color: #1a1a10;
+}
+.caption {
+    font: 300 normal 16pt/1.2em "Source Sans Pro", san-serif;
+    color: #1a1a10;
+}
+.accent,
+blockquote {
+    font: 300 normal 14pt/1.4em "libre_baskervilleitalic";
+    .magenta {
+        color: #e91853;
+    }
+    .violet {
+        color: #521cd4;
+    }
+    .lightgray {
+        color: #f0f0ec;
+    }
+    .mediumgray {
+        color: #b4b0a2;
+    }
+    .darkgray {
+        color: #1a1a10;
+    }
+}
+a.lightlink {color: #fff; border-bottom:1px dotted #fff;}
+a.lightlink:hover {color: #e91853; border-bottom:1px dotted #e91853;}
+
+//Smooth State Transitions between pages
+#main {
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+}
+#main.is-exiting {
+    opacity: 0;
+}
+button {
+    outline: none;
+}
+.text-right {
+    text-align: right;
+}
+.table {
+    display: table;
+    width: 100%;
+    .middle {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+.hide-scroll-bar {
+    overflow: hidden;
+    transition: all 0.5s ease-out;
+}
+
+/*
+	Site Navigation
+ */
+.nav-hamburger {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: #e91853;
+    z-index: 9;
+}
+.site-nav-btn-wrapper {
+    position: relative;
+}
+#site-nav-btn {
+    button {
+        background-color: transparent;
+        border: none;
+    }
+}
+.site-navigation {
+    .site-navigation-block {
+		position: absolute;
+		top: 0; right: 0; bottom: 0; left: 0;
+		background-image: url(/images/nav-bg.jpg);
+		background-size: cover;
+		background-position: center top;
+		overflow: hidden;
+		z-index: -1;
+		transition: all 0.5s ease-in-out;
+		opacity: 0;		
+	}
+    .table {
+        height: 100%;
+    }
+    .site-navigation-block.active {
+        opacity: 1;
+        z-index: 2;
+        .site-logo {
+            margin-left: -5px;
+        }
+    }
+    // left service side with address ....
+    .nav-service-list {
+        font-size: 42px;
+        line-height: 62px;
+    }
+    .services-title span {
+        color: #fff;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #fff;
+        @media screen and (max-width: 1100px) {
+            display: none;
+        }
+    }
+    // right page side with social icons.....
+    .nav-page-list {
+        li {
+            font-size: 24px;
+            line-height: 50px;
+        }
+    }
+    // generic
+    ol {
+        list-style-type: none;
+        font-size: 36px;
+        color: #fff;
+        overflow: hidden;
+        clear: both;
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .nav-list-footer {
+            padding-top: 30px;
+            display: block;
+            font-size: 16px;
+        }
+    }
+    .copyright {
+        margin-top: 55px;
+        color: #fff;
+        font-size: 0.8em;
+    }
+    .column {
+        width: 50%;
+    }
+}
+.white-dash {
+    width: 100px;
+    height: 1px;
+    background-color: #fff;
+    float: right;
+}
+.social-nav {
+    display: block;
+    overflow: hidden;
+    clear: both;
+    padding-top: 25px;
+    a {
+        display: inline-block;
+        width: 24px;
+        height: 52px;
+        transition: all 0.3s ease-in-out;
+        path {
+            fill: #fff;
+        }
+        &:hover {
+            path {
+                fill: #e91853;
+            }
+        }
+    }
+}
+// nav address
+.nav-address {
+    margin-top: 25px;
+    overflow: hidden;
+    clear: both;
+    .marker-block,
+    .address-block {
+        display: inline-block;
+    }
+    .marker-block img {
+        padding-bottom: 15px;
+    }
+    .address-block p {
+        color: #fff;
+        font-size: 15px;
+        line-height: 1;
+        margin-left: 15px;
+    }
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+// Each Page Header
+.site-logo {
+    position: absolute;
+    z-index: 5;
+    @media screen and (max-width: 992px) {
+        width: 96px;
+    }
+}
+.site-header {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    min-height: 500px;
+}
+.site-header .center-title {
+    h1 {
+        font-family: 'Source Sans Pro';
+        color: #fff;
+        font-size: 54px;
+        font-size: 5vw;
+        letter-spacing: 0.05em;
+        text-align: center;
+        
+        @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+             font-size: 250%;
+        }
+    }
+    blockquote {
+        font: 300 normal 28pt/1.2em "Source Sans Pro", san-serif;
+        color: #fff;
+    }
+}
+header {
+    transition: all .5s ease-in-out;
+}
+
+/* SITE WIDE FOOTER */
+
+.site-footer {
+    background-color: #1a1a10;
+    overflow: hidden;
+    .new-business-block {
+        position: relative;
+        height: 377px;
+        background-color: #e91853;
+    }
+    .bulb-container {
+        max-width: 88px;
+        margin: 0 auto;
+        width: 88px;
+    }
+    .new-business,
+    .about-us-footer {
+        position: absolute;
+        top: 50%;
+        margin-top: -100px;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        .nb-title {
+            text-transform: uppercase;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font: 900 normal 20pt/1.2em "Source Sans Pro", san-serif;
+        }
+        .phone {
+            margin-bottom: 5px;
+        }
+        a,
+        p {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+    .innerliner {
+        display: inline-block;
+        margin: 20px 60px 10px 20px;
+    }
+    .new-employee-block {
+        position: relative;
+        height: 377px;
+        background-color: #521cd4;
+    }
+    .company-info-block {
+        margin-top: 68px;
+        height: 500px;
+        color: #fff;
+        font-size: 21px;
+        @media screen and (max-width: 768px) {
+            height: 100%;
+            text-align: center;
+        }
+        .social-links {
+            margin: 35px 0;
+            a {
+                color: #fff;
+                text-decoration: none;
+            }
+            a:nth-child(n+2) {
+                margin-left: 30px;
+            }
+        }
+        .address {
+            display: block;
+            span {
+                display: inline-block;
+                margin-bottom: 10px;
+            }
+        }
+        .add-prop {
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+    .service-line-block {
+        margin-top: 68px;
+        text-align: right;
+        @media screen and (max-width: 768px) {
+            text-align: center;
+        }
+        ul {
+            display: block;
+            margin-bottom: 30px;
+            font-size: 18px;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            overflow: hidden;
+            clear: both;
+            li {
+                span {
+                    height: 47px;
+                    line-height: 34px;
+                    vertical-align: middle;
+                    font-size: 18px;
+                    display: inline-block;
+                }
+                img {
+                    height: 30px;
+                }
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                    margin-right: 10px;
+                    @media screen and (max-width: 768px) {
+                        border-bottom: 1px dotted #fff;
+                    }
+                    &:hover {
+                        border-bottom: 1px dotted #fff;
+                    }
+                }
+            }
+        }
+    }
+    .women-owned {
+        margin-top: 25px;
+        img {
+            max-width: 100px;
+        }
+    }
+}
+.about-us-footer {
+    text-align: center;
+    //left: 0;
+    .about-us-icon {
+        max-width: 88px;
+        margin: 0 auto;
+        width: 88px;
+    }
+}
+// Social Media Footer Row
+.social-footer-block {
+    background-color: #b4b0a2;
+    min-height: 200px;
+    height: 100%;
+    .icon-block {
+        text-align: center;
+    }
+    .social-wrap {
+        margin-top: 55px;
+    }
+    img {
+        width: 85px;
+        height: 85px;
+    }
+    c80e25 .action-copy {
+        display: inline-block;
+        height: 85px;
+        /* float: right; */
+        line-height: 85px;
+        vertical-align: top;
+        text-decoration: none;
+        font-size: 1.3em;
+        text-transform: uppercase;
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .fb {
+        color: #f0f0ec;
+    }
+    .li {
+        color: #f0f0ec;
+    }
+    .twitter {
+        color: #f0f0ec;
+    }
+}
+.social-icons.social-nav {
+    a {
+        text-decoration: inherit;
+        span {
+            font-size: 24px;
+            color: #fff;
+            margin-left: 15px;
+            &:hover {
+                color: #521cd4;
+            }
+        }
+    }
+}
+.block {
+    display: block;
+}
+.shadow:before {
+    content: "";
+    background-size: auto 100%;
+    width: 100%;
+    height: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .6;
+}
+.shadow-bar {
+    &:before {
+        content: '';
+        background: url('../images/shadow.png') 50% 0 no-repeat;
+    }
+}
+.shadow-bar-block {
+    vertical-align: top;
+    max-width: 100%;
+}
+// primary -buttons
+.primary-btn {
+    border: 1px solid #e91853;
+    display: inline-block;
+    min-width: 260px;
+    height: 56px;
+    line-height: 53px;
+    text-align: center;
+    vertical-align: middle;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    font-size: 20px;
+    font-weight: 700;
+}
+// medium -buttons
+.medium-btn {
+    margin-top: 15px;
+    display: inline-block;
+    width: 80%;
+    min-width: 200px;
+    height: 40px;
+    line-height: 40px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+.work-btn {
+    background: -webkit-linear-gradient(top, #4BA0E8 0%, #2A7D90 100%);
+    background: -moz-linear-gradient(top, #f6aa50 0%, #e5933f 100%);
+    background: -o-linear-gradient(top, #f6aa50 0%, #e5933f 100%);
+    background: linear-gradient(top, #f6aa50 0%, #e5933f 100%);
+    background: -ms-linear-gradient(top, #f6aa50 0%, #e5933f 100%);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
+    border: 1px solid #2C83AD;
+    display: inline-block;
+    min-width: 260px;
+    height: 56px;
+    line-height: 53px;
+    text-align: center;
+    vertical-align: middle;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+///// quote-banner
+.quote-banner-1 {
+    padding: 10px 0 30px 0;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    text-align: center;
+    overflow: hidden;
+    clear: both;
+    h3 {
+        font: 300 normal 20pt/1.2em "Source Sans Pro", san-serif;
+        color: #b4b0a2;
+        font-size: 2em;
+    }
+}
+.blue-banner {
+    background-color: #b4b0a2;
+}
+.navy-blue-banner {
+    background-color: $bg-navyblue;
+}
+// Print
+@media print {
+    .site-header {
+        height: 100px !important;
+    }
+    .icon-arrow-down {
+        display: none;
+    }
+    h1 {
+        font-size: 16px !important;
+    }
+    h3 {
+        font-size: 14px !important;
+    }
+    p {
+        font-size: 10px !important;
+    }
+    .service img {
+        width: 50px;
+    }
+    section {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}
+//Work / Clients Page
+.client-gallery {
+    margin: 0 auto;
+    margin-bottom: 80px;
+    figure {
+        height: 125px;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        margin: 10px 0;
+    }
+    img {
+        padding: 0 15px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

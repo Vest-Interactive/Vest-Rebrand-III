@@ -1,0 +1,318 @@
+///////////////// Request A Quote Page
+.request-a-quote {
+    .header {
+        position: relative;
+    }
+    .nav-logo {
+        float: left;
+    }
+    .phone-number,
+    .address-header {
+        float: right;
+    }
+    .break {
+        float: right;
+        line-height: 105px;
+        font-size: 2em;
+        opacity: 0.5;
+        margin-left: 15px;
+        margin-right: 15px;
+        color: #ccc;
+    }
+    .phone-number {
+        .fa {
+            font-size: 20px;
+        }
+        a {
+            color: inherit;
+        }
+    }
+    .address-header,
+    .phone-number {
+        height: 112px;
+        line-height: 112px;
+    }
+    .address-header {
+        display: block;
+        strong {
+            text-transform: uppercase;
+        }
+    }
+    .error {
+        color: red;
+    }
+    @media screen and (max-width: 645px) {
+        .break {
+            display: none;
+        }
+        .phone-number,
+        .address-header {
+            display: block;
+            line-height: 50px;
+            height: 50px;
+            text-align: right;
+            width: 50%;
+            strong {
+                display: none;
+            }
+        }
+        .address-header {
+            line-height: 1.5;
+        }
+    }
+    .title {
+        margin-top: 35px;
+        background-color: #f0f0ec;
+        text-align: center;
+        border-top: 1px solid #b4b0a2;
+        h1 {
+            text-transform: uppercase;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
+        }
+    }
+    .contact-block {
+        background: url(../images/bg-creative-top.jpg) 50% 0 repeat #fbfbfb;
+        padding: 20px;
+        padding-bottom: 100px;
+        overflow: hidden;
+        clear: both;
+        position: relative;
+    }
+    .form-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        h2 {
+            padding: 0;
+            margin: 0;
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+        ul.what-you-get {
+            position: relative;
+            padding: 0;
+            margin: 0;
+            li {
+                padding-left: 45px;
+                padding-bottom: 25px;
+                position: relative;
+                &:before {
+                    content: "\f00c";
+                    display: inline-block;
+                    font: normal normal normal 14px/1 FontAwesome;
+                    font-size: inherit;
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    position: absolute;
+                    top: 0;
+                    font-size: 1.5em;
+                    color: #b4b0a2;
+                    left: 0;
+                }
+            }
+        }
+    }
+    form {
+        width: 100%;
+        height: 100%;
+        padding: 5%;
+        padding-top: 45px;
+        padding-bottom: 45px;
+        border-radius: 10px;
+        margin-top: 25px;
+        background: #fff;
+        clear: both;
+        overflow: hidden;
+        border-bottom: 1px solid #b4b0a2;
+        border-left: 1px solid #b4b0a2;
+        border-top: 1px solid #b4b0a2;
+        border-right: 1px solid #b4b0a2;
+        box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
+        background-color: #f0f0ec;
+        background: #f0f0ec url('../images/debut-light.png');
+        .description {
+            text-align: center;
+            width: 100%
+        }
+    }
+    .form-expertise-list {
+        p {
+            display: block;
+            padding: 5px 0 0 0;
+            margin: 0;
+        }
+        li {
+            padding-bottom: 10px;
+            margin-left: 10px;
+        }
+    }
+    .input-row {
+        margin-bottom: 15px;
+    }
+    form label {
+        display: block;
+        padding: 5px 0;
+    }
+    form input[type=text],
+    textarea {
+        height: 45px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        border: 1px solid #b4b0a2;
+        vertical-align: middle;
+        width: 100%;
+        padding: 0 10px;
+    }
+    textarea {
+        height: 100px;
+    }
+    .form-btn {
+        margin: 0 auto;
+        padding-top: 15px;
+        text-align: center;
+    }
+    //// Right Side of Form
+    .description-block {
+        margin-top: 65px;
+        padding-left: 20px;
+    }
+    .grey-bar {
+        margin-top: 45px;
+        width: 70%;
+        height: 1px;
+        background-color: #f0f0ec;
+    }
+    .list-address {
+        display: block;
+        color: inherit;
+        margin-top: 35px;
+        padding-top: 5px;
+        position: relative;
+        padding-left: 90px;
+        &:before {
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            content: "\f041";
+            left: 20px;
+            position: absolute;
+            color: #e91853;
+            top: 44px;
+            font-size: 2.8em;
+        }
+        &:after {
+            content: '';
+            border-radius: 50%;
+            height: 70px;
+            width: 70px;
+            border: 3px solid;
+            position: absolute;
+            left: -4px;
+            top: 32px;
+            color: #e91853;
+            opacity: .5;
+        }
+        h3 {
+            padding: 0;
+            margin: 0;
+            padding-top: 20px;
+        }
+        p {
+            margin: 0;
+            margin-top: 10px;
+        }
+    }
+    .list-phone {
+        margin-top: 45px;
+        padding-left: 90px;
+        position: relative;
+        &:before {
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            content: "\f095";
+            left: 16px;
+            position: absolute;
+            color: #e91853;
+            top: 15px;
+            font-size: 2.75em;
+        }
+        &:after {
+            content: '';
+            border-radius: 50%;
+            height: 70px;
+            width: 70px;
+            border: 3px solid;
+            position: absolute;
+            left: -4px;
+            top: 0;
+            color: #e91853;
+            opacity: .5;
+        }
+        h3 {
+            padding: 0;
+            margin: 0;
+            padding-top: 20px;
+        }
+        p {
+            margin: 0;
+            margin-top: 10px;
+        }
+    }
+}
+.radio {
+    display: inline-block;
+    padding-right: 20px;
+    height: 28px;
+    cursor: pointer;
+    &:hover .inner {
+        transform: scale(0.5);
+        opacity: .5;
+    }
+    // Native input control and checked events
+    input {
+        height: 1px;
+        width: 1px;
+        opacity: 0; // Hide input, but leave it available for tabbing
+        &:checked + .outer .inner {
+            //@include transform(scale(1));
+            transform: scale(1, 1);
+            opacity: 1;
+        }
+        &:checked + .outer {
+            border: 3px solid #b4b0a2;
+        }
+        &:focus + .outer .inner {
+            transform: scale(1, 1);
+            opacity: 1;
+            background-color: darken(#1a1a10, 10);
+        }
+    }
+    // Outer ring of custom radio
+    .outer {
+        width: 28px;
+        height: 28px;
+        display: block;
+        float: left;
+        border: 3px solid #f0f0ec;
+        border-radius: 50%;
+        background-color: #fff;
+    }
+    // Inner ring of custom radio
+    .inner {
+        transition: all 0.25s ease-in-out;
+        width: 16px;
+        height: 16px;
+        transform: scale(0);
+        display: block;
+        margin: 3px;
+        border-radius: 50%;
+        background-color: #b4b0a2;
+        opacity: 0;
+    }
+}
